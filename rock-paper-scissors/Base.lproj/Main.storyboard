@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BaseController" customModule="rock_paper_scissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKA-kN-d6R">
+                                <rect key="frame" x="57" y="40" width="300" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="OuK-P2-v3q"/>
+                                    <constraint firstAttribute="width" constant="327" id="Ukg-x5-aVY">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="300"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="107" id="qx7-2b-ww2">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                                <string key="text">rock-paper-scissors
+game</string>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OuK-P2-v3q"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="OuK-P2-v3q"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="R7a-E9-dW0">
+                                <rect key="frame" x="87" y="304" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="7Qc-rf-M2K"/>
+                                    <constraint firstAttribute="height" constant="128" id="Hdx-Km-3VN">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GCc-34-7Va">
+                                <rect key="frame" x="10" y="578" width="394" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGj-kU-oP7">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="54"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="rules">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jmt-UF-OoO" kind="show" id="6h5-Nt-X9D"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJZ-ed-fhw">
+                                        <rect key="frame" x="0.0" y="74" width="394" height="54"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="play">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="qDg-tZ-T7a" kind="show" id="3Hj-pX-kFa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99656552080000005" green="0.85893017049999998" blue="0.1131510213" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eKA-kN-d6R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7b3-Gl-nVs"/>
+                            <constraint firstItem="R7a-E9-dW0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8xh-pN-Mwk"/>
+                            <constraint firstItem="R7a-E9-dW0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pw3-Ti-End"/>
+                            <constraint firstItem="GCc-34-7Va" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fAw-cs-hE4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GCc-34-7Va" secondAttribute="bottom" constant="30" id="hSr-V3-2D5"/>
+                            <constraint firstItem="eKA-kN-d6R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vkr-XY-ifO"/>
+                            <constraint firstItem="GCc-34-7Va" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="wBl-Hz-kWs"/>
+                            <constraint firstItem="eKA-kN-d6R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="wCx-LO-1qR">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="15"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GCc-34-7Va" secondAttribute="trailing" constant="10" id="zlD-v8-zo1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="fJZ-ed-fhw" id="SA3-jC-EB2"/>
+                        <outlet property="rulesButton" destination="wGj-kU-oP7" id="DHr-AK-Dd3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="281"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EGE-Sj-CNV">
+            <objects>
+                <viewController id="jmt-UF-OoO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RFn-6r-ZpK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rulse" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bow-vg-c8m">
+                                <rect key="frame" x="44" y="31" width="326" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4ie-ch-s7g"/>
+                                    <constraint firstAttribute="width" constant="326" id="VSp-NN-UAE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KSd-PP-yWQ">
+                                <rect key="frame" x="44" y="191" width="326" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. stone wins scissors" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjs-wr-zdz">
+                                        <rect key="frame" x="0.0" y="0.0" width="326" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="326" id="oJj-xS-0Rp"/>
+                                            <constraint firstAttribute="height" constant="60" id="ti8-Pg-l2Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. scissors wins papper" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXY-f3-ZZa">
+                                        <rect key="frame" x="0.0" y="90" width="326" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="326" id="8en-e2-hVR"/>
+                                            <constraint firstAttribute="height" constant="60" id="mbd-5q-la5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. paper wins stone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xl6-mu-qRV">
+                                        <rect key="frame" x="0.0" y="180" width="326" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="326" id="Xwi-cK-yO1"/>
+                                            <constraint firstAttribute="height" constant="60" id="tsM-w8-QuU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="5"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99656552080000005" green="0.85893017049999998" blue="0.1131510213" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Bow-vg-c8m" firstAttribute="centerX" secondItem="RFn-6r-ZpK" secondAttribute="centerX" id="HIC-sv-my4"/>
+                            <constraint firstItem="KSd-PP-yWQ" firstAttribute="top" secondItem="Bow-vg-c8m" secondAttribute="bottom" constant="100" id="Ric-lN-nBX">
+                                <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="Bow-vg-c8m" firstAttribute="top" secondItem="jky-ss-cld" secondAttribute="top" constant="31" id="cvh-Ub-F5v"/>
+                            <constraint firstItem="KSd-PP-yWQ" firstAttribute="centerX" secondItem="RFn-6r-ZpK" secondAttribute="centerX" id="fuM-0Y-aoB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jky-ss-cld"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dub-Bb-0J7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUP-qW-6pC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="711"/>
+        </scene>
+        <!--Game Controller-->
+        <scene sceneID="EjO-0L-QLX">
+            <objects>
+                <viewController id="qDg-tZ-T7a" customClass="GameController" customModule="rock_paper_scissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T2j-MJ-lW0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 your choise" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq8-kg-X6n">
+                                <rect key="frame" x="44" y="30" width="326" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="JX8-KE-8h2"/>
+                                    <constraint firstAttribute="width" constant="326" id="cfM-bB-qRQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BFJ-Ul-95I">
+                                <rect key="frame" x="20" y="190" width="374" height="506"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="poZ-dF-y60">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="155.33333333333334"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Swh-Tv-sZK" appends="YES" id="FJ1-zh-Wzx"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-cQ-6UR">
+                                        <rect key="frame" x="0.0" y="175.33333333333331" width="374" height="155.33333333333331"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="C3t-Or-Rjt" appends="YES" id="blh-EH-WLq"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stone" translatesAutoresizingMaskIntoConstraints="NO" id="XeB-ih-XGH">
+                                        <rect key="frame" x="0.0" y="350.66666666666663" width="374" height="155.33333333333337"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="gxT-Ge-ojm" appends="YES" id="Per-qD-dxa"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99656552080000005" green="0.85893017049999998" blue="0.1131510213" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="xq8-kg-X6n" firstAttribute="top" secondItem="fyO-Ag-nYl" secondAttribute="top" constant="30" id="5Of-5C-avY"/>
+                            <constraint firstItem="BFJ-Ul-95I" firstAttribute="top" secondItem="xq8-kg-X6n" secondAttribute="bottom" constant="100" id="OG8-SU-GxW"/>
+                            <constraint firstItem="xq8-kg-X6n" firstAttribute="centerX" secondItem="T2j-MJ-lW0" secondAttribute="centerX" id="emR-NT-cfN"/>
+                            <constraint firstItem="fyO-Ag-nYl" firstAttribute="bottom" secondItem="BFJ-Ul-95I" secondAttribute="bottom" constant="20" id="re8-UP-7yx"/>
+                            <constraint firstItem="BFJ-Ul-95I" firstAttribute="leading" secondItem="fyO-Ag-nYl" secondAttribute="leading" constant="20" id="ttt-jT-NJv"/>
+                            <constraint firstItem="fyO-Ag-nYl" firstAttribute="trailing" secondItem="BFJ-Ul-95I" secondAttribute="trailing" constant="20" id="vPR-ua-rV9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fyO-Ag-nYl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TJH-eF-Rks"/>
+                    <connections>
+                        <outlet property="label" destination="xq8-kg-X6n" id="32d-e8-dw2"/>
+                        <outlet property="paper" destination="poZ-dF-y60" id="2tf-ZU-pOd"/>
+                        <outlet property="rock" destination="XeB-ih-XGH" id="55i-KT-CEe"/>
+                        <outlet property="scissors" destination="Ov8-cQ-6UR" id="s5E-a9-aaG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdj-Na-lo1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="C3t-Or-Rjt">
+                    <connections>
+                        <action selector="scissorsChoise:" destination="qDg-tZ-T7a" id="2ZA-er-qFn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gxT-Ge-ojm">
+                    <connections>
+                        <action selector="rockChoise:" destination="qDg-tZ-T7a" id="ry8-ye-DcK"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Swh-Tv-sZK">
+                    <connections>
+                        <action selector="paperChoise:" destination="qDg-tZ-T7a" id="Ssx-Ve-QGg"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="959" y="-142"/>
+        </scene>
+        <!--Result Controller-->
+        <scene sceneID="Ljw-Ga-RMU">
+            <objects>
+                <viewController storyboardIdentifier="ResultController" id="Mi2-vF-50w" customClass="ResultController" customModule="rock_paper_scissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0jM-87-q1a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 is WINNER!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-cU-nc4">
+                                <rect key="frame" x="44" y="338" width="326" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="326" id="eMT-kq-O5v"/>
+                                    <constraint firstAttribute="height" constant="60" id="ovJ-hO-V3G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99656552080000005" green="0.85893017049999998" blue="0.1131510213" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="OIi-cU-nc4" firstAttribute="centerX" secondItem="0jM-87-q1a" secondAttribute="centerX" id="Bh0-d6-Puv"/>
+                            <constraint firstItem="OIi-cU-nc4" firstAttribute="centerY" secondItem="0jM-87-q1a" secondAttribute="centerY" id="kHE-oj-eUK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uGK-XD-RAj"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="OIi-cU-nc4" id="4xf-qc-WXs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfd-oo-kmB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2007" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="2048" height="1152"/>
+        <image name="paper" width="1958" height="2476"/>
+        <image name="scissors" width="2588" height="1656"/>
+        <image name="stone" width="350" height="373"/>
+    </resources>
+</document>
